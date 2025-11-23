@@ -4,7 +4,12 @@ from torch import nn
 from kymatio.torch import Scattering2D
 
 class MNIST_CNN(nn.Module):
-    
+    """
+    End-to-end CNN model for MNIST and Fashion-MNIST, with Tanh activations. 
+    References:
+    - Papernot, Nicolas, et al. Tempered Sigmoid Activations for Deep Learning with Differential Privacy. In AAAI 2021.
+    - Tramer, Florian, and Dan Boneh. Differentially Private Learning Needs Better Features (or Much More Data). In ICLR 2021. 
+    """
     def __init__(self, input_dim, output_dim):
         super(MNIST_CNN, self).__init__()
         
